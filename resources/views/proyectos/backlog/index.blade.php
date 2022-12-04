@@ -20,7 +20,6 @@
              
             <!-- Traemos los datos de la BD para usarlo en la grafica  -->
             <?php $user = auth()->user();?>
-                   @foreach ($user->proyectos as $proyecto)
                         @foreach ($backlog->sprint as $sprint)                      
                             @foreach ($sprint->user_story as $user_story)
                             
@@ -47,10 +46,8 @@
                            
                         @endforeach
                     <br>
-                    @endforeach
             
             <!-- Archivo canvas para minimizar la grafica que no funka -->
-
             <script>
                     
                     const ctx = document.getElementById('myChart').getContext('2d');
